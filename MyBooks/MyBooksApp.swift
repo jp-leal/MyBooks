@@ -6,12 +6,15 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct MyBooksApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            BookListView()
         }
+        .modelContainer(for: Book.self)
     }
+    
 }
